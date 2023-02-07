@@ -1,0 +1,26 @@
+#:kivy 1.0
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Submit"
+            on_press: self.parent.parent.manager.current = "play_game"
+
+<PlayGameScreen>:
+    BoxLayout:
+        MineLayout:
+
+        BoxLayout:
+            Label:
+                text: "World"
+        
+
+<BombPopup>:
+    auto_dismiss: False
+    title: "Bomb!!"
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text: "Your turn, gone!"
+        Button:
+            text: 'Close me!'
